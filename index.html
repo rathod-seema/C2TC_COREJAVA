@@ -1,47 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Tabbed Form</title>
-<link rel="stylesheet"href="css/style.css"type="text/css" />
-<script src="js/jquery.js"type="text/javascript"></script>
-<script src="js/animation.js"type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music test</title>
+    <script src="./dist/bundle.js" defer></script>
+     
 </head>
 <body>
-<form name="myform" onsubmit="return validation()">
-<ul>
-<li class="title">Who Are You</li>
-<li class="fields">
-<label>*First Name:</label><br />
-<input id="first_name" class="req"type="text"/><br />
-<label>Middle Name:</label><br />
-<input id="middle_name" class="req"type="text"/><br />
-<label>Last Name:</label><br />
-<input id="last_name" class="req"type="text"/><br />
-<label>*Email:</label><br />
-<input id="email" class="req"type="text"/><br />
-</li>
-
-<li class="title">Where Are You?</li>
-<li class="fields">
-<label>City:</label><br />
-<input id="city"type="text"/><br />
-<label>*State:</label><br />
-<input id="state" class="req"type="text"/><br />
-<label>Country:</label><br />
-<input id="country"type="text"/><br />
-</li>
-
-<li class="title">What Do You Do?</li>
-<li class="fields">
-<label>*Occupation:</label><br />
-<input id="occupation" class="req"type="text"/><br />
-<label>Company:</label><br />
-<input id="company" type="text"/><br />
-<label>Company Location:</label><br />
-<input id="location"type="text"/><br />
-</li>
-</ul>
-<input type="submit" value="Submit Form" />
-</form>
-
+    <button id="start-playing">Start Playing</button> 
+    <script>
+        let play = document.getElementById("start-playing");
+        function playMusic(){
+            let audio = new Audio("./src/assets/D4.mp3");
+            audio.play()
+        }
+        play.addEventListener("click", playMusic);
+    </script> 
+    <div class="audio-elements-holder">
+        <audio id="D4" src="./src/assets/D4.mp3"></audio>
+        <audio id="F4" src="./src/assets/F4.mp3"></audio>
+        <audio id="G4" src="./src/assets/G4.mp3"></audio>
+        <audio id="A4" src="./src/assets/A4.mp3"></audio>
+        <audio id="B4F" src="./src/assets/B4 Flat.mp3"></audio>
+        <audio id="C5" src="./src/assets/C5.mp3"></audio>
+        <audio id="D5" src="./src/assets/D5.mp3"></audio>
+        <audio id="D5S" src="./src/assets/D5 Sharp.mp3"></audio>
+        <audio id="F5" src="./src/assets/F5.mp3"></audio>
+        <audio id="F5S" src="./src/assets/F5 Sharp.mp3"></audio>
+        <audio id="G5" src="./src/assets/G5.mp3"></audio>
+        <audio id="A5" src="./src/assets/A5.mp3"></audio>
+        <audio id="B5F" src="./src/assets/B5 Flat.mp3"></audio>
+    </div>
 </body>
 </html>
